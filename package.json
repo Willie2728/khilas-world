@@ -1,0 +1,1 @@
+{"name":"khilas-world","version":"1.0.0","private":true,"description":"Khila's personal interest hub and secure AI artist guide","scripts":{"start":"node server.js"},"engines":{"node":">=18"}}

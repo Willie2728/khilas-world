@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ec4f91" />
+  <meta name="description" content="Khila's personal hub for music, style, beauty, sports and study." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Khila's World</title>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Khila's World home"><span>K</span> KHILA'S WORLD</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#music">Music</a><a href="#style">Style</a><a href="#beauty">Beauty</a>
+      <a href="#sports">Raiders</a><a href="#school">Study</a>
+    </nav>
+    <div class="mini-clock"><b id="clock">--:--</b><span id="date">Loading</span></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">MY MUSIC • MY STYLE • MY SPACE</p>
+        <h1>Everything Khila<br><em>loves.</em></h1>
+        <p>A playful home for playlists, beauty finds, fresh fits, Raider Nation and school wins.</p>
+        <div class="hero-actions"><a class="button primary" href="#music">Explore music</a><button class="button ghost" id="installApp" hidden>Install app</button></div>
+      </div>
+      <div class="hero-stack" aria-label="Featured interests">
+        <article class="vinyl-card card-a"><span>NOW PLAYING</span><b>R&amp;B<br>energy</b><i>♪</i></article>
+        <article class="vinyl-card card-b"><span>STYLE EDIT</span><b>Fresh<br>finds</b><i>✦</i></article>
+        <article class="vinyl-card card-c"><span>RAIDER NATION</span><b>Silver<br>&amp; black</b><i>🏈</i></article>
+      </div>
+    </section>
+
+    <section class="weather-strip" aria-label="Weather widget">
+      <div><span id="weatherIcon">☀️</span><b id="weatherTemp">--°</b></div>
+      <div><strong id="weatherCity">Las Vegas</strong><span id="weatherText">Getting the forecast…</span></div>
+      <button id="useLocation">Use my location</button>
+    </section>
+
+    <section class="section" id="music">
+      <div class="section-head"><div><p class="eyebrow">DISCOVER YOUR SOUND</p><h2>Music room</h2></div><a class="button youtube" href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Open YouTube</a></div>
+      <div class="artist-search"><label for="artistSearch">Search the artist catalog</label><div><input id="artistSearch" type="search" placeholder="Try Chris Brown, SZA, Beyoncé…" autocomplete="off"><button id="searchBtn">Search</button></div><div id="searchSuggestions" class="suggestions"></div></div>
+      <div class="artist-feature" id="artistFeature">
+        <img id="artistImage" src="https://img.youtube.com/vi/mH76VvWkNwA/maxresdefault.jpg" alt="Chris Brown official music video still">
+        <div class="artist-overlay"><p>FEATURED ARTIST</p><h3 id="artistName">Chris Brown</h3><span id="artistBio">R&amp;B • Pop • Performer</span><div id="artistLinks" class="social-row"></div></div>
+        <button class="ask-artist" id="openChat"><span>✦</span> Ask AI about Chris</button>
+      </div>
+      <div class="subhead"><h3>All things Chris Brown</h3><div class="slider-controls"><button data-slider="musicRail" data-dir="-1">←</button><button data-slider="musicRail" data-dir="1">→</button></div></div>
+      <div class="card-rail" id="musicRail"></div>
+    </section>
+
+    <section class="section soft" id="style">
+      <div class="section-head"><div><p class="eyebrow">THE STYLE CLOSET</p><h2>Find your next look</h2></div></div>
+      <div class="category-picker"><select id="styleSelect" aria-label="Choose a clothing category"><option>Jordans</option><option>Nike</option><option>Adidas</option><option>Blouses</option><option>Dresses</option><option>Jackets</option><option>Shorts</option><option>Jeans</option></select><button class="button primary" data-shop="styleSelect">Search the web</button></div>
+      <div class="card-rail product-rail" id="styleRail"></div>
+      <div class="platform-row"><span>Find more inspiration</span><a data-platform="Pinterest" href="#">Pinterest</a><a data-platform="Instagram" href="#">Instagram</a><a data-platform="TikTok" href="#">TikTok</a></div>
+    </section>
+
+    <section class="section" id="beauty">
+      <div class="section-head"><div><p class="eyebrow">GLOW YOUR WAY</p><h2>Beauty bar</h2></div></div>
+      <div class="category-picker"><select id="beautySelect" aria-label="Choose a beauty category"><option>Makeup</option><option>Eyelashes</option><option>Perfume</option><option>Hair care</option><option>Nails</option><option>Skincare</option></select><button class="button primary" data-shop="beautySelect">Find products</button></div>
+      <div class="card-rail product-rail" id="beautyRail"></div>
+    </section>
+
+    <section class="raiders section" id="sports">
+      <div class="raider-copy"><p class="eyebrow">SILVER &amp; BLACK FOREVER</p><h2>Raider Nation</h2><p>Videos, team news, scores and fresh gear—one click away.</p><div><a class="button light" href="https://www.raiders.com/" target="_blank" rel="noopener">Official team site</a><a class="button outline-light" href="https://www.youtube.com/@Raiders" target="_blank" rel="noopener">Watch Raiders</a></div></div>
+      <div class="shield" aria-label="Raiders fan graphic"><span>LV</span><b>RAIDERS</b><i>☠</i></div>
+    </section>
+
+    <section class="section school" id="school">
+      <div><p class="eyebrow">LEVEL UP</p><h2>Khila's study studio</h2><p>Courses, notes and assignments will live here. This space is ready for the materials you upload next.</p></div>
+      <div class="study-grid"><article><span>📚</span><b>My courses</b><small>Course cards coming next</small></article><article><span>✓</span><b>Assignments</b><small>Stay focused and on track</small></article><article><span>⏱</span><b>Focus timer</b><button id="focusTimer">Start 25:00</button></article></div>
+    </section>
+  </main>
+
+  <aside class="chat-panel" id="chatPanel" aria-hidden="true">
+    <div class="chat-head"><div><span>✦</span><div><b id="chatTitle">Ask about Chris Brown</b><small>AI guide • not the real artist</small></div></div><button id="closeChat" aria-label="Close chat">×</button></div>
+    <div class="chat-messages" id="chatMessages"><div class="bot">Hi Khila! Ask me about music, albums, performances, or public artist information. For live tour dates, I’ll send you to an official source.</div></div>
+    <form id="chatForm"><input id="chatInput" placeholder="Ask a question…" required><button aria-label="Send">➜</button></form>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <footer><a class="brand" href="#home"><span>K</span> KHILA'S WORLD</a><p>Made for Khila with rhythm, style &amp; heart.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
