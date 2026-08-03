@@ -1,4 +1,4 @@
-const CACHE='khila-world-v4',ASSETS=['./','./index.html','./styles.css','./guide.css','./app.js','./manifest.webmanifest','./icon.svg'];
+const CACHE='khila-world-v6',ASSETS=['./','./index.html','./styles.css','./guide.css','./app.js','./manifest.webmanifest','./icon.svg','./willie-avatar.webp'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',e=>{if(e.request.method==='GET'&&!e.request.url.includes('/api/'))e.respondWith(fetch(e.request).then(r=>{const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return r}).catch(()=>caches.match(e.request))) });

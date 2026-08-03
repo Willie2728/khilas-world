@@ -3,3 +3,5 @@ node_modules/
 *.log
 GITHUB-UPLOAD/
 GITHUB-UPDATE*/
+willie-headshot.png
+*.zip
