@@ -8,6 +8,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preconnect" href="https://images.unsplash.com" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="guide.css" />
   <title>Khila's World</title>
 </head>
 <body>
@@ -79,11 +80,37 @@
     </section>
   </main>
 
+  <div class="utility-wrap">
+    <button class="utility-toggle" id="utilityToggle" aria-label="Open assistant menu" aria-expanded="false">+</button>
+    <div class="utility-menu" id="utilityMenu">
+      <button id="openAssistant"><span>AI</span><div><b>ChatGPT assistant</b><small>Ask about almost anything</small></div></button>
+      <button id="audioToggle"><span id="audioIcon">ON</span><div><b>Voice responses</b><small id="audioStatus">Audio is on</small></div></button>
+      <a href="#home"><span>H</span><div><b>Home</b><small>Return to the top</small></div></a>
+    </div>
+  </div>
+  <aside class="assistant-panel" id="assistantPanel" aria-hidden="true">
+    <div class="assistant-head"><div><span>AI</span><div><b>Khila's ChatGPT assistant</b><small>General AI help</small></div></div><button id="closeAssistant" aria-label="Close assistant">X</button></div>
+    <div class="assistant-messages" id="assistantMessages"><div class="bot">Hi Khila! I can help with questions, ideas, explanations, planning, and more. What would you like to explore?</div></div>
+    <form id="assistantForm"><input id="assistantInput" placeholder="Ask ChatGPT anything..." required><button aria-label="Send">Go</button></form>
+  </aside>
   <aside class="chat-panel" id="chatPanel" aria-hidden="true">
     <div class="chat-head"><div><span>✦</span><div><b id="chatTitle">Ask about Chris Brown</b><small>AI guide • not the real artist</small></div></div><button id="closeChat" aria-label="Close chat">×</button></div>
     <div class="chat-messages" id="chatMessages"><div class="bot">Hi Khila! Ask me about music, albums, performances, or public artist information. For live tour dates, I’ll send you to an official source.</div></div>
     <form id="chatForm"><input id="chatInput" placeholder="Ask a question…" required><button aria-label="Send">➜</button></form>
   </aside>
+  <div class="floating-dock" aria-label="Quick navigation">
+    <a class="dock-home" href="#home" aria-label="Return to Khila's home"><span>⌂</span><small>Home</small></a>
+    <button class="willie-button" id="openWillie" aria-label="Open Willie, the site guide"><span class="willie-avatar">W</span><small>Ask Willie</small></button>
+  </div>
+  <aside class="willie-panel" id="williePanel" aria-hidden="true">
+    <div class="willie-head"><span class="willie-avatar large">W</span><div><b>Willie</b><small>Khila's site guide</small></div><button id="closeWillie" aria-label="Close Willie guide">×</button></div>
+    <div class="willie-body">
+      <p>Hey Khila! I’m always here to help you find your way around.</p>
+      <button data-go="music">♫ Explore music</button><button data-go="style">✦ Browse style</button><button data-go="beauty">♡ Visit beauty</button><button data-go="sports">🏈 Raider Nation</button><button data-go="school">📚 Study studio</button>
+      <div class="willie-tip"><b>Opening YouTube or another website?</b><span>It opens in a new tab. Close that tab or switch back to the Khila’s World tab when you’re finished.</span></div>
+    </div>
+  </aside>
+  <div class="site-toast" id="siteToast" role="status" aria-live="polite">Opened in a new tab — Khila's World is still here.</div>
   <div class="scrim" id="scrim"></div>
   <footer><a class="brand" href="#home"><span>K</span> KHILA'S WORLD</a><p>Made for Khila with rhythm, style &amp; heart.</p></footer>
   <script src="app.js"></script>
